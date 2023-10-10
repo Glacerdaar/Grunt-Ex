@@ -1,0 +1,240 @@
+@corDeFundo: #E48632;
+@corDoTexto: #463014;
+@corDoTextoDois: #FFFFFF;
+@fontPrincipal: 'Josefin Sans', sans-serif;
+@fontSecundaria: 'Roboto', sans-serif;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    width: 100%;
+
+    @media screen and (min-width: 768px) and (max-width: 1023px){
+        max-width: 80%;
+    }
+
+    @media screen and (max-width: 767px){
+        max-width: 70%;
+
+        img {
+            display: none;
+        }
+    }
+       
+
+}
+
+header {
+    background-color: @corDoTexto;
+    box-shadow: 0px 3px 10px @corDoTexto;
+    font-family: @fontPrincipal;
+
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 6rem;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        h1 {
+            color: @corDeFundo;
+            font-size: 46px;
+        }
+    }
+
+    .nav-list{
+        display: flex;
+        align-items: center;
+
+        ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+
+            .nav-item {
+                margin: 0 15px;
+
+                .nav-link {
+                    text-decoration: none;
+                    color: @corDeFundo;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    font-family: @fontSecundaria;
+                }
+            }
+        }
+    }
+
+    .login-btn {
+
+        button {
+            border: none;
+            background-color: @corDeFundo;
+            padding: 10px 15px;
+            border-radius: 5px;    
+        }
+
+        a {
+            text-decoration: none;
+            color: @corDoTexto;
+            font-size: 1.1rem
+        }
+    }
+
+    .mobile-menu-icon {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
+@media  screen and (max-width: 730px){
+    header {
+
+    .nav-bar {
+        padding: 1.5rem 4rem;
+
+       .nav-item {
+        display: none;
+
+        .nav-link {
+            color: @corDeFundo;
+        }
+    }   
+    
+    .login-btn {
+        display: none;
+    }
+
+    }
+
+    .mobile-menu-icon {
+        display: block;
+
+        button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        }
+    }
+
+    .mobile-menu {
+
+        ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+        }
+
+        .nav-item {
+            display: block;
+            padding-top: 1.2rem;
+        }
+
+        .login-btn {
+            display: block;
+            padding: 1rem 2rem;
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+
+    .open {
+        display: block;
+
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+
+    } 
+}
+
+.about {
+    margin-top: 60px;
+    color: @corDoTexto;
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        img {
+            width: 20%;
+        }
+        .about-item {
+            max-width: 520px;
+            text-align: justify;
+            font-family: @fontSecundaria;
+
+            h2 {
+                font-family: @fontPrincipal;
+                margin-bottom: 16px;
+                font-size: 32px;
+            }
+        }
+    }
+}
+
+.functions {
+    margin-top: 60px;
+    color: @corDoTexto;
+    h2 {
+        font-size: 32px;
+        font-family: @fontPrincipal;
+    }
+
+    p {
+        font-family: @fontSecundaria;
+    }
+
+    .function-item {
+        list-style: none;
+        font-family: @fontSecundaria;
+        margin: 1em 0;
+        text-align: justify;
+
+        h4 {
+            font-size: 20px;
+        }
+    }
+}
+
+.links {
+    margin-top: 60px;
+    color: @corDoTexto;
+    font-family: @fontSecundaria;
+    margin-bottom: 2em;
+
+    h2 {
+        margin-bottom: 1em;
+    }
+
+    a {
+        text-decoration: none;
+        color: @corDeFundo;
+    }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px;
+    background-color: @corDeFundo;
+}
